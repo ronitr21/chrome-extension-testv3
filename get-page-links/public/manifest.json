@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Uthrive v3",
+  "version": "0.0.1",
+  "content_scripts": [{ "js": ["content.js"], "matches": ["<all_urls>"]}],
+  "background": {
+  "scripts": [
+  "background.js"
+  ]
+  },
+  "permissions": ["tabs", "identity", "identity.email"],
+  "web_accessible_resources": ["*.html"],
+  "content_security_policy": "script-src 'self' 'sha256-/13BBW2yQVtpCsBV7JiO23y7pwEFFUobOzefJ27Nltg='; object-src 'self'",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Uthrive V3"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
